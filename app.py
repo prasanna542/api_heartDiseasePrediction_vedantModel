@@ -2,6 +2,7 @@ import traceback
 from flask import Flask, request, jsonify
 from sklearn.externals import joblib
 # import joblib
+from sklearn.linear_model import LogisticRegression
 
 import numpy as np
 from flask_cors import CORS
