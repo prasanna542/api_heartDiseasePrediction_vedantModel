@@ -1,7 +1,7 @@
 import traceback
 from flask import Flask, request, jsonify
-# from sklearn.externals import joblib
-import joblib
+from sklearn.externals import joblib
+# import joblib
 
 import numpy as np
 from flask_cors import CORS
@@ -75,7 +75,7 @@ def predict():
                 float(params['cholesterol']),
                 float(params['thalach'])
                 ]]
-            )
+            ) 
             prediction = (clf.predict(input)).tolist()
             probability = (clf.predict_proba(input)).tolist()
             return jsonify(
